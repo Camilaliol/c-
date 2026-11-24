@@ -1,11 +1,9 @@
-#include <stdio.h> //aqui chama a entrada e saida o print e o scanf para ler
-#include <string.h>
+#include <stdio.h>
+#include <windows.h> // 1. Adicione esta linha no topo
 
-int main () { // aqui é o local onde vai ficar o codigo 
-    char nome [50]; //o char é caracteres e o 50 a quantidade de memoria que sera usada para o nome
-    printf("Digite o seu nome: ");
-    scanf("%s", nome); //O %s é um cod. secreto  que avisa o scanf que vai receber string 
-    printf("Bem-Vindos, %s!\n", nome);
+int main() {
+    SetConsoleOutputCP(65001); // 2. Adicione esta linha antes do printf
+
+    printf("Olá, mundo!\n");
     return 0;
 }
-
